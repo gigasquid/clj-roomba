@@ -1,0 +1,17 @@
+These RXTX files were just copied directly from the 0103 released of 
+Processing.  
+
+Their versions are reported as:
+ Native lib Version = RXTX-2.1-7pre17
+ Java lib Version   = RXTX-2.1-7pre17
+
+
+
+
+If you've never used RXTX before on your Mac OS X box, run the command:
+
+% ./macosx_setup.command
+
+And then shutdown (not just log out) and log back in again.
+And read this faq from Processing: http://processing.org/faq/bugs.html#serial
+
