@@ -13,10 +13,11 @@
 (.startup roomba)  ;;puts Roomba in safe Mode
 ;; What mode is Roomba in?
 (.modeAsString roomba)
-
 (.control roomba)
+(.updateSensors roomba) ; returns true if you are connected
+
+
 (.pause roomba 30)
-(.updateSensors roomba)
 (.playNote roomba 72 40)
 (.playNote roomba 79 40)
 (.spinLeft roomba)
@@ -28,18 +29,17 @@
 
 (.stop roomba)
 (.reset roomba)
-
+(.vacuum roomba true)
+(.vacuum roomba false)
 
 ;; Get the sensor data
+(.updateSensors roomba) 
 (.bumpLeft roomba)
 (.bumpRight roomba)
 (.wheelDropLeft roomba)
 (.wheelDropRight roomba)
 (.wheelDropCenter roomba)
 (.sensorsAsString roomba)
-
-(.vacuum roomba true)
-(.vacuum roomba false)
 
 
 (defn bark [r]
@@ -49,7 +49,6 @@
     (.pause 150)
     (.vacuum false)))
 
-
 (bark roomba)
 
-(.disconnect roomba)  ;; coredumps locally native problem?
+(.disconnect roomba)
