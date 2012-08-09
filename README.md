@@ -8,7 +8,7 @@ hacking.
 * Install the following jars using the [localrepo plugin](https://github.com/kumarshantanu/lein-localrepo)
 *        lein localrepo install roombacomm/roombacomm.jar roombacomm 0.96
 *        lein localrepo install roombacomm/RXTXcomm.jar rxtxcomm 0103 
-* Clojure jack-in and follow the example in core.clj to control your
+* Clojure jack-in and follow the example in core.clj to control your Roomba!
 
 ## References
 * [RoombaComm Java Library](http://hackingroomba.com/code/roombacomm/)
