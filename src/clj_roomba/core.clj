@@ -1,6 +1,7 @@
 (ns clj-roomba.core
   (:import roombacomm.RoombaCommSerial))
 
+
 (println (System/getProperty "java.class.path"))
 (println (System/getProperty "java.library.path"))
 
@@ -8,14 +9,15 @@
 
 ;;Find your port for your Roomba
 (map println (.listPorts roomba))
-(def portname "/dev/cu.FireFly-943A-SPP")
+
+(def portname "/dev/rfcomm0")
 (.connect roomba portname)
 (.startup roomba)  ;;puts Roomba in safe Mode
 ;; What mode is Roomba in?
 (.modeAsString roomba)
 (.control roomba)
 (.updateSensors roomba) ; returns true if you are connected
-
+(.connected roomba)
 
 (.pause roomba 30)
 (.playNote roomba 72 40)
